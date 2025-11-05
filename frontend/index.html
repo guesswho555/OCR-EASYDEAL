@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR System from Scratch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OCR System</h1>
+        <p>Upload an image or use your webcam to extract text.</p>
+
+        <div class="controls">
+            <button id="image-btn">Use Image</button>
+            <button id="webcam-btn">Use Webcam</button>
+        </div>
+
+        <div id="image-input-section" class="input-section">
+            <h2>Upload Image File</h2>
+            <input type="file" id="image-file-input" accept="image/*">
+            <button id="submit-image-btn">Extract Text from Image</button>
+        </div>
+
+        <div id="webcam-input-section" class="input-section" style="display:none;">
+            <h2>Webcam Feed</h2>
+            <video id="webcam-feed" width="640" height="480" autoplay></video>
+            <button id="capture-btn">Capture and Extract Text</button>
+            <button id="stop-webcam-btn">Stop Webcam</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Extracted Text</h2>
+            <div id="loading-spinner" class="spinner" style="display:none;"></div>
+            <pre id="output-text"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
